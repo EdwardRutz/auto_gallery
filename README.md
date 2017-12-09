@@ -23,5 +23,9 @@ A dealer application and website allowing users to sign up for an account to man
 - Use browser to open ```127.0.0.1:3000/cargallery```
 
 
+## Test
+- Test the password validation in the models, run:  ```rails test:models```
+
+
 
 ## REFERENCES
