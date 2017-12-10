@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  year: MyString
+  trim: MyString
+  vin: 1
+  auto_img: MyString
+  auto_description: MyText
+  condition: MyString
+  mileage: 1
+  list_price: 1
+  price_sold: 1
+  sold: false
+  featured: false
+  purchase_price: 1
+  purchase_date: 2017-12-08
+  price_sold: 1
+  date_sold: 2017-12-08
+  sold_by: MyString
+  user: one
+
+two:
+  make: MyString
+  model: MyString
+  year: MyString
+  trim: MyString
+  vin: 1
+  auto_img: MyString
+  auto_description: MyText
+  condition: MyString
+  mileage: 1
+  list_price: 1
+  price_sold: 1
+  sold: false
+  featured: false
+  purchase_price: 1
+  purchase_date: 2017-12-08
+  price_sold: 1
+  date_sold: 2017-12-08
+  sold_by: MyString
+  user: two
