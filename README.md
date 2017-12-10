@@ -13,6 +13,12 @@ A dealer application and website allowing users to sign up for an account to man
 - Inventory console give mastery over inventory details so the right car can be quickly sold to the right customer
 - Dealer Console makes it easy to update dealer showroom site with essential information to make car sales 
 
+## DEPENDENCIES
+- Ruby 2.4.2
+- Rails 5.1.4
+- SQLite 3.19.3
+- bcrypt 3.1.7
+
 ## GETTING STARTED
 - Clone repository: ```git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY```
 - Install gems ```bundle install --without production```
@@ -26,6 +32,7 @@ A dealer application and website allowing users to sign up for an account to man
 ## Tests & Validation
 - Test to see if app works, run:  ```rails test```
 
+Tests Include:
 - Test validation of password: object present, name/email present, name/email length
 - Email and Name length is limited to 20 characters
 - Email address must conform to the pattern ```user@example.com```

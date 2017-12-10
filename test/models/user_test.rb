@@ -8,7 +8,8 @@ class UserTest < ActiveSupport::TestCase
   # Test to make sure the initial model object is valid, @user
   # User.new creates a Ruby object in memory
   def setup
-    @user = User.new(name: "Example User", email: "user@example.com")
+    @user = User.new(name: "Example User", email: "user@example.com",
+    password: "password", password_confirmation: "password")
   end
 
   test "should be valid" do
@@ -66,6 +67,9 @@ class UserTest < ActiveSupport::TestCase
   #   @user.save
   #   assert_not duplicate_user.valid?
   # end
+
+
+
 
 
 end
