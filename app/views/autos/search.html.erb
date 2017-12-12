@@ -1,0 +1,64 @@
+
+
+<!-- NAVBAR -->
+<%= render 'layouts/header' %>
+
+
+
+<h1>Search for Autos</h1>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Autos</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Trim</th>
+    <th>Vin</th>
+    <th>Auto description</th>
+    <th>Condition</th>
+    <th>Mileage</th>
+    <th>List price</th>
+    <th>Featured</th>
+    <th>Purchase price</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @autos.each do |auto| %>
+    <tr>
+      <td><%= auto.make %></td>
+      <td><%= auto.model %></td>
+      <td><%= auto.year %></td>
+      <td><%= auto.trim %></td>
+      <td><%= auto.vin %></td>
+      <td><%= auto.auto_description %></td>
+      <td><%= auto.condition %></td>
+      <td><%= auto.mileage %></td>
+      <td><%= auto.list_price %></td>
+      <td><%= auto.price_sold %></td>
+      <td><%= link_to 'Show', auto %></td>
+      <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
+      <td><%= link_to 'Destroy', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+<!--   FOOTER   -->
+<%= render 'layouts/footer' %>

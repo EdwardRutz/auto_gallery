@@ -7,9 +7,18 @@ class AutosController < ApplicationController
     @autos = Auto.all
   end
 
+  def sales_console
+    @autos = Auto.all
+  end
+
+
   # GET /autos/1
   # GET /autos/1.json
   def show
+  end
+
+  def search
+    @autos = Auto.all
   end
 
   # GET /autos/new

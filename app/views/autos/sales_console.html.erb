@@ -1,0 +1,61 @@
+<html>
+
+<h1>Sales Console</h1>
+
+
+<p>Update auto sales information</p>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Autos</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Vin</th>
+    <th>List price</th>
+    <th>Price sold</th>
+    <th>Sold</th>
+    <th>Purchase price</th>
+    <th>Purchase date</th>
+    <th>Price sold</th>
+    <th>Date sold</th>
+    <th>Sold by</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @autos.each do |auto| %>
+    <tr>
+      <td><%= auto.make %></td>
+      <td><%= auto.model %></td>
+      <td><%= auto.year %></td>
+      <td><%= auto.list_price %></td>
+      <td><%= auto.price_sold %></td>
+      <td><%= auto.sold %></td>
+      <td><%= auto.purchase_price %></td>
+      <td><%= auto.purchase_date %></td>
+      <td><%= auto.price_sold %></td>
+      <td><%= auto.date_sold %></td>
+      <td><%= auto.sold_by %></td>
+      <td><%= link_to 'Show', auto %></td>
+      <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
+      <td><%= link_to 'Destroy', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
+
+
+
+</html>
