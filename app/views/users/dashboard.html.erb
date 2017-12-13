@@ -1,20 +1,34 @@
 <html>
+<%= render 'layouts/header_dashboard' %>
 
-<h1>Dealer Dashboard</h1>
 
-<h4> Dealer Overview</h4>
-<h5>- Sales Overview</h5>
-<h5>- Inventory Overview</h5>
+
+
+
+
+<br><br><br><br>
+
+<h1>DEALER DASHBOARD</h1>
+
 
 
 <ul>
-  <li><%= link_to "[Sales Console]", sales_console_url %></li>
+  <li>SALES</li>
+    <ul>
+      <li>Sales This Week</li>
+      <li>Monthly Sales</li>
+      <li>Year-to-Date Sales</li>
+    </ul>
 
-  <li> <%= link_to "[Inventory Console]", autos_path %> </li>
+  <br><br>
 
-  <li><%= link_to "[Dealer Console]", users_path %> </li>
-
+  <li>INVENTORY</li>
+    <ul>
+      <li>Total Autos in Inventory</li>
+      <li>Average time in Inventory</li>
+    </ul>
 </ul>
+
 
 </html>
 
