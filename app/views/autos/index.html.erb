@@ -1,6 +1,21 @@
 <%= render 'layouts/header_dashboard' %>
 
 
+<div class="container">
+  <div class="row">
+    <div class="col-*-*"></div>
+    <div class="col-*-*"></div>
+  </div>
+  <div class="row">
+    <div class="col-*-*"></div>
+    <div class="col-*-*"></div>
+    <div class="col-*-*"></div>
+  </div>
+  <div class="row">
+    ...
+  </div>
+</div>
+
 
 
 <p id="notice"><%= notice %></p>
@@ -8,54 +23,56 @@
 <br><br><br><br>
 <h1>Autos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Year</th>
-      <th>Trim</th>
-      <th>Vin</th>
-      <th>Auto img</th>
-      <th>Auto description</th>
-      <th>Condition</th>
-      <th>Mileage</th>
-      <th>List price</th>
-      <th>Sold</th>
-      <th>Featured</th>
-      <th>Purchase price</th>
-      <th>Purchase date</th>
+<div style="overflow-x:auto;">
 
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @autos.each do |auto| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= auto.make %></td>
-        <td><%= auto.model %></td>
-        <td><%= auto.year %></td>
-        <td><%= auto.trim %></td>
-        <td><%= auto.vin %></td>
-        <td><%= auto.auto_img %></td>
-        <td><%= auto.auto_description %></td>
-        <td><%= auto.condition %></td>
-        <td><%= auto.mileage %></td>
-        <td><%= auto.list_price %></td>
-        <td><%= auto.sold %></td>
-        <td><%= auto.featured %></td>
-        <td><%= auto.purchase_price %></td>
-        <td><%= auto.purchase_date %></td>
-        <td><%= auto.user %></td>
-        <td><%= link_to 'Show', auto %></td>
-        <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
-        <td><%= link_to 'Destroy', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Trim</th>
+        <th>Vin</th>
+        <th>Auto img</th>
+        <th>Auto description</th>
+        <th>Condition</th>
+        <th>Mileage</th>
+        <th>List price</th>
+        <th>Sold</th>
+        <th>Featured</th>
+        <th>Purchase price</th>
+        <th>Purchase date</th>
+        <!--<th> User </th>-->
 
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @autos.each do |auto| %>
+        <tr>
+          <td><%= auto.make %></td>
+          <td><%= auto.model %></td>
+          <td><%= auto.year %></td>
+          <td><%= auto.trim %></td>
+          <td><%= auto.vin %></td>
+          <td><%= auto.auto_img %></td>
+          <td><%= auto.auto_description %></td>
+          <td><%= auto.condition %></td>
+          <td><%= auto.mileage %></td>
+          <td><%= auto.list_price %></td>
+          <td><%= auto.sold %></td>
+          <td><%= auto.featured %></td>
+          <td><%= auto.purchase_price %></td>
+          <td><%= auto.purchase_date %></td>
+          <!--<td><%= auto.user %></td>-->
+          <td><%= link_to 'Show', auto %>
+            <%= link_to 'Edit', edit_auto_path(auto) %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'New Auto', new_auto_path %>
