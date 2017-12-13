@@ -1,3 +1,5 @@
+// Primary Stylesheet
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -23,12 +25,12 @@ h4 {
   font-weight: 400;
   margin-bottom: 30px;
 }
-.jumbotron {
-  background-color: #58595B;
-  color: #fff;
-  padding: 100px 25px;
-  font-family: Montserrat, sans-serif;
-}
+//.jumbotron {
+//  background-color: #58595B;
+//  color: #fff;
+//  padding: 100px 25px;
+//  font-family: Montserrat, sans-serif;
+//}
 .container-fluid {
   padding: 60px 50px;
 }
@@ -36,11 +38,11 @@ h4 {
   background-color: #f6f6f6;
 }
 .logo-small {
-  color: #f4511e;
+  color: #000;
   font-size: 50px;
 }
 .logo {
-  color: #f4511e;
+  color: #000; //was #f4511e
   font-size: 200px;
 }
 .thumbnail {
@@ -58,28 +60,6 @@ h4 {
 /********************* NAV BAR *********************/
 
 
-.navbar {
-  margin-bottom: 0;
-  background-color: #f4511e;
-  z-index: 9999;
-  border: 0;
-  font-size: 12px !important;
-  line-height: 1.42857143 !important;
-  letter-spacing: 4px;
-  border-radius: 0;
-  font-family: Montserrat, sans-serif;
-}
-.navbar li a, .navbar .navbar-brand {
-  color: #fff !important; /* Color was fff */
-}
-.navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #f4511e !important;
-  background-color: #fff !important;
-}
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  color: #fff !important;
-}
 
 
 /********************* FOOTER ********************/
@@ -88,7 +68,7 @@ h4 {
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #f4511e;
+  color: #000000;
 }
 
 
@@ -116,7 +96,7 @@ footer .glyphicon {
 
 /********************* COLOR PALETTE *********************
 
-Smoky: 58595B
+Smoky: #58595B
 
 
 */
