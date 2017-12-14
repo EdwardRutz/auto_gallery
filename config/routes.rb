@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   # Users
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'
+  # get '/signup', to: 'users#new'
+
 
   # Welcome
   get '/contact', to: 'welcome#contact', as: 'contact'
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
   # Access
   get '/admin', to: 'access#menu', as: 'admin'
   get 'access/menu'
-  get 'access/login'
+  get 'login', to: 'access#new'
   post 'access/attempt_login'
   get 'access/logout'
 
