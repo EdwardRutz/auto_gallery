@@ -1,3 +1,5 @@
+<%= render 'layouts/header_dashboard' %>
+<br><br><br><br>git
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,6 +26,7 @@
   <strong>Password digest:</strong>
   <%= @user.password_digest %>
 </p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
