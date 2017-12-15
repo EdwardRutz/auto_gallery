@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   root 'welcome#index'
 
   # Autos
@@ -16,11 +18,16 @@ Rails.application.routes.draw do
   get '/about', to: 'welcome#about', as: 'about'
 
   # Access
-  get '/admin', to: 'access#menu', as: 'admin'
-  get 'access/menu'
-  get 'login', to: 'access#new'
-  post 'access/attempt_login'
-  get 'access/logout'
+  # get '/admin', to: 'access#menu', as: 'admin'
+  # get 'access/menu'
+  # get 'access/login', to: 'access#new'
+  # post 'access/attempt_login'
+  # get 'access/logout'
+
+  # Sessions
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  # delete 'logout', to: 'sessions#destroy'
 
   resources :autos
   resources :users
