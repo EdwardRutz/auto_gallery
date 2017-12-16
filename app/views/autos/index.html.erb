@@ -33,7 +33,7 @@
         <th>Year</th>
         <th>Trim</th>
         <th>Vin</th>
-        <th>Auto img</th>
+        <!--<th>Auto img</th>-->
         <th>Auto description</th>
         <th>Condition</th>
         <th>Mileage</th>
@@ -56,7 +56,7 @@
           <td><%= auto.year %></td>
           <td><%= auto.trim %></td>
           <td><%= auto.vin %></td>
-          <td><%= auto.auto_img %></td>
+          <!--<td><%= auto.auto_img %></td>-->
           <td><%= auto.auto_description %></td>
           <td><%= auto.condition %></td>
           <td><%= auto.mileage %></td>
@@ -68,6 +68,7 @@
           <!--<td><%= auto.user %></td>-->
           <td><%= link_to 'Show', auto %>
             <%= link_to 'Edit', edit_auto_path(auto) %>
+          <td><%= link_to 'Destroy', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
