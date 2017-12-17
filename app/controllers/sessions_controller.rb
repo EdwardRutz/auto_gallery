@@ -6,7 +6,10 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
-      redirect_to user
+      # TODO.Notice does not show up???
+      flash[:notice] = 'You are now logged in'
+      redirect_to(dashboard_path)
+
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
@@ -15,6 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to(root_path)
   end
 end
