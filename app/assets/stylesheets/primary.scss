@@ -3,7 +3,38 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/********************* UNIVERSAL *********************/
+
+/*
+* BASIC
+  - General Style
+  - Typography Style
+  - Button Style
+  - Form Style
+  - Spacer Style
+
+* HEADER
+  - Header
+  - Logo Style
+  - Navigation Menu Style
+
+* INTRO
+  - intro
+
+* ELEMENTS
+  - Social
+  - pagination
+  - Contact Form, Map, contact-info
+
+* FOOTER
+  - Social
+  - Copyright
+
+* GLOBEL
+  - Forms(Register new user)
+
+
+*/
+/********************* GENERAL STYLE *********************/
 
 
 body {
@@ -128,6 +159,34 @@ footer .glyphicon {
   }
 }
 
+/********************* FORMS-REGISTER NEW USER *********************/
+
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  box_sizing: borderbox;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
 
 
 /********************* COLOR PALETTE *********************
