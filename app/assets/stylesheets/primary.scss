@@ -195,7 +195,32 @@ Smoky: #58595B
 
 
 */
+/********************* PARALLAX EFFECT *********************/
 
+.parallax1 {
+  background-image: url("parallax1.jpeg");
+}
 
+.parallax2 {
+  background-image: url("parallax2.jpeg");
+}
+
+.parallax3 {
+  background-image: url("parallax3.jpeg");
+}
+
+.parallax4 {
+  background-image: url("parallax4.jpeg");
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
