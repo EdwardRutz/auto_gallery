@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to(root_path)
+    flash[:notice] = 'Logged out of Dashboard'
+    redirect_to root_url
   end
 end
