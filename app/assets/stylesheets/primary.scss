@@ -29,7 +29,7 @@
   - Social
   - Copyright
 
-* GLOBEL
+* GLOBAL
   - Forms(Register new user)
 
 
@@ -42,10 +42,13 @@ body {
   line-height: 1.8;
   color: #818181;
 }
+h1 {
+  color: #000;
+}
 h2 {
   font-size: 24px;
   text-transform: uppercase;
-  color: #303030;
+  color: #000;
   font-weight: 600;
   margin-bottom: 30px;
 }
@@ -102,28 +105,29 @@ table {
 }
 
 th {
-  height: 50px;
+  height: 40px;
   text-align: center;
-  background-color: #000000;
-  color: white;}
+  background-color: #58595B;
+  color: white;
+}
 
 table, th, td {
   border: 1px solid black;
 }
 
 td {
-  height: 25px;
+  height: 15px;
   vertical-align: bottom;
+  font-size: small;
+  color: #000;
+  text-align: left;
+  padding: 2px;
 }
 
-th, td {
-  padding: 5px;
-  text-align: left;
-}
 
 tr:hover {background-color: rgba(245, 141, 24, 0.55);}
 
-tr:nth-child(even) {background-color: #58595B;}
+// tr:nth-child(even) {background-color: #58595B;}
 
 /********************* FOOTER ********************/
 
