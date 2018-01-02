@@ -25,10 +25,15 @@
   <%= @auto.vin %>
 </p>
 
+
+
+
 <p>
-  <strong>Auto img:</strong>
-  <%= @auto.auto_img %>
+  <strong>Auto Image:</strong>
 </p>
+<%= image_tag(@auto.image_url.to_s) %>
+
+
 
 <p>
   <strong>Auto description:</strong>
