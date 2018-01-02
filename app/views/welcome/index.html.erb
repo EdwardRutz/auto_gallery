@@ -21,8 +21,6 @@
 <!-- NAVBAR -->
 <%= render 'layouts/header' %>
 
-  <!-- PARALLAX IMAGE -->
-  <div class="parallax1"></div>
 
 <!-- JUMBOTRON -->
 
@@ -31,8 +29,9 @@
     <p>The Right Car at the Right Price</p>
   </div>
 
-<!-- PARALLAX IMAGE -->
-  <div class="parallax2"></div>
+  <!-- PARALLAX IMAGE -->
+  <div class="parallax1"></div>
+
 
 
 <!-- Container (FEATURED AUTOS) -->
@@ -47,7 +46,8 @@
 
     <div class="col-sm-4">
       <div class="thumbnail">
-        <!--<img src="mercedes.jpg" alt="Paris" width="400" height="300">-->
+        <%= image_tag ("car1a.png") %>
+        <!-- <img src="/app/assets/images/car1.png" width="400" height="300"> -->
         <p><strong>Mercedes</strong></p>
         <p>$50k</p>
       </div>
@@ -55,6 +55,7 @@
 
     <div class="col-sm-4">
       <div class="thumbnail">
+        <%= image_tag ("car2.png") %>
         <!--<img src="newyork.jpg" alt="New York" width="400" height="300">-->
         <p><strong>Corvette</strong></p>
         <p>Cash Only!</p>
@@ -63,6 +64,7 @@
 
     <div class="col-sm-4">
       <div class="thumbnail">
+        <%= image_tag ("car3.png") %>
         <!--<img src="sanfran.jpg" alt="San Francisco" width="400" height="300">-->
         <p><strong>Ford</strong></p>
         <p>Buy one get one free</p>
@@ -73,9 +75,10 @@
 
 </div>
 
+<!-- PARALLAX IMAGE -->
+  <div class="parallax2"></div>
 
 
-<div class="parallax3"></div>
 
 
 
@@ -121,6 +124,7 @@
   </div>
 </div>
 
+<div class="parallax3"></div>
 
 <!-- Add Google Maps -->
 <div class="container-fluid text-center">
