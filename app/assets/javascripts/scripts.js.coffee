@@ -1,0 +1,5 @@
+
+
+jQuery ->
+  $('#inventory').dataTable()
+    
