@@ -1,7 +1,8 @@
 class WelcomeController < ApplicationController
 
   def index
-    @featured = Auto.all
+    @featured = Auto.where(:featured => true)
+    # @featured = Auto.all
     # @autos = Auto.all
   end
 
