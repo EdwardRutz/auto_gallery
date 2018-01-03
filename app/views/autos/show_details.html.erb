@@ -1,0 +1,103 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @auto.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @auto.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @auto.year %>
+</p>
+
+<p>
+  <strong>Trim:</strong>
+  <%= @auto.trim %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @auto.vin %>
+</p>
+
+
+
+
+<p>
+  <strong>Auto Image:</strong>
+</p>
+<%= image_tag(@auto.image_url.to_s) %>
+
+
+
+<p>
+  <strong>Auto description:</strong>
+  <%= @auto.auto_description %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @auto.condition %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @auto.mileage %>
+</p>
+
+<p>
+  <strong>List price:</strong>
+  <%= @auto.list_price %>
+</p>
+
+<p>
+  <strong>Price sold:</strong>
+  <%= @auto.price_sold %>
+</p>
+
+<p>
+  <strong>Sold:</strong>
+  <%= @auto.sold %>
+</p>
+
+<p>
+  <strong>Featured:</strong>
+  <%= @auto.featured %>
+</p>
+
+<p>
+  <strong>Purchase price:</strong>
+  <%= @auto.purchase_price %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @auto.purchase_date %>
+</p>
+
+<p>
+  <strong>Price sold:</strong>
+  <%= @auto.price_sold %>
+</p>
+
+<p>
+  <strong>Date sold:</strong>
+  <%= @auto.date_sold %>
+</p>
+
+<p>
+  <strong>Sold by:</strong>
+  <%= @auto.sold_by %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @auto.user %>
+</p>
+
+<%= link_to 'Back', autos_path %>
