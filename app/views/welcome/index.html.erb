@@ -21,8 +21,6 @@
 <!-- NAVBAR -->
 <%= render 'layouts/header' %>
 
-  <!-- PARALLAX IMAGE -->
-  <div class="parallax1"></div>
 
 <!-- JUMBOTRON -->
 
@@ -31,8 +29,9 @@
     <p>The Right Car at the Right Price</p>
   </div>
 
-<!-- PARALLAX IMAGE -->
-  <div class="parallax2"></div>
+  <!-- PARALLAX IMAGE -->
+  <div class="parallax1"></div>
+
 
 
 <!-- Container (FEATURED AUTOS) -->
@@ -47,25 +46,31 @@
 
     <div class="col-sm-4">
       <div class="thumbnail">
-        <!--<img src="mercedes.jpg" alt="Paris" width="400" height="300">-->
+        <%= image_tag ("car1d.png") %>
+        <!-- <img src="/app/assets/images/car1.png" width="400" height="300"> -->
         <p><strong>Mercedes</strong></p>
         <p>$50k</p>
+        <a href="#" class="btn btn-primary">Schedule a Test Drive</a>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="thumbnail">
+        <%= image_tag ("car2.png") %>
         <!--<img src="newyork.jpg" alt="New York" width="400" height="300">-->
         <p><strong>Corvette</strong></p>
         <p>Cash Only!</p>
+        <a href="#" class="btn btn-primary">Schedule a Test Drive</a>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="thumbnail">
+        <%= image_tag ("car3.png") %>
         <!--<img src="sanfran.jpg" alt="San Francisco" width="400" height="300">-->
         <p><strong>Ford</strong></p>
         <p>Buy one get one free</p>
+        <a href="#" class="btn btn-primary">Schedule a Test Drive</a>
       </div>
     </div>
 
@@ -74,8 +79,59 @@
 </div>
 
 
+<br><br><br>
+<table>
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Trim</th>
+    <!-- <th>Vin</th> -->
+    <th>Auto description</th>
+    <th>Condition</th>
+    <th>Mileage</th>
+    <th>List price</th>
+    <!-- <th>Featured</th> -->
+    <!-- <th>Purchase price</th> -->
+    <th colspan="3"></th>
+  </tr>
+  </thead>
 
-<div class="parallax3"></div>
+  <tbody>
+  <% @featured.each do |auto| %>
+    <tr>
+      <td><%= auto.make %></td>
+      <td><%= auto.model %></td>
+      <td><%= auto.year %></td>
+      <td><%= auto.trim %></td>
+      <!-- <td><%= auto.vin %></td> -->
+      <td><%= auto.auto_description %></td>
+      <td><%= auto.condition %></td>
+      <td><%= auto.mileage %></td>
+      <td><%= auto.list_price %></td>
+      <!-- <td><%= auto.price_sold %></td> -->
+      <td><%= link_to 'Details', auto %></td>
+      <!--<td><%= link_to 'Edit', edit_auto_path(auto) %></td>-->
+      <!--<td><%= link_to 'Delete', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule a Test Drive</a></p>
+
+  <br><br><br><br>
+
+
+
+
+<!-- PARALLAX IMAGE -->
+  <div class="parallax2"></div>
+
+
 
 
 
@@ -121,6 +177,13 @@
   </div>
 </div>
 
+<div class="parallax3"></div>
+
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule Auto Service</a></p>
+
+  <br><br><br><br>
 
 <!-- Add Google Maps -->
 <div class="container-fluid text-center">
@@ -142,20 +205,29 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkWslnRKIUhtGkaD4m28H00-AGKwp0DFU&callback=myMap"></script>
 </center>
 
-<br><br><br><br>
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule an Auto Consult</a></p>
+
+  <br><br><br><br>
 
 <!-- PARALLAX IMAGE #4 NASHVILLE -->
 
       <div class="parallax4">
-        <div class="text-center">
-          <br>
-          <p>
+        <div class="text-center contact-font">
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <!-- TODO.Refactor this -->
+          
             Located in <br>
             "Music City"<br>
-            Nashville, Tennessee
-          </p>
+            Nashville, Tennessee      
         </div>
       </div>
+
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Contact Us</a></p>
+
+  <br><br><br><br>
 
 
 <!--   FOOTER   -->
