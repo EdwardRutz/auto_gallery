@@ -12,6 +12,14 @@ class AutosController < ApplicationController
   end
 
 
+
+  # def featured
+  #  @featured = Auto.where(:featured => true)
+  # end
+
+
+
+
   # GET /autos/1
   # GET /autos/1.json
   def show
@@ -81,3 +89,9 @@ class AutosController < ApplicationController
       params.require(:auto).permit(:make, :model, :year, :trim, :vin, :auto_img, :image, :auto_description, :condition, :mileage, :list_price, :price_sold, :sold, :featured, :purchase_price, :purchase_date, :price_sold, :date_sold, :sold_by, :user_id)
     end
 end
+
+
+
+
+
+

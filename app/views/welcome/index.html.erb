@@ -78,6 +78,56 @@
 
 </div>
 
+
+<br><br><br>
+<table>
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Trim</th>
+    <!-- <th>Vin</th> -->
+    <th>Auto description</th>
+    <th>Condition</th>
+    <th>Mileage</th>
+    <th>List price</th>
+    <!-- <th>Featured</th> -->
+    <!-- <th>Purchase price</th> -->
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @featured.each do |auto| %>
+    <tr>
+      <td><%= auto.make %></td>
+      <td><%= auto.model %></td>
+      <td><%= auto.year %></td>
+      <td><%= auto.trim %></td>
+      <!-- <td><%= auto.vin %></td> -->
+      <td><%= auto.auto_description %></td>
+      <td><%= auto.condition %></td>
+      <td><%= auto.mileage %></td>
+      <td><%= auto.list_price %></td>
+      <!-- <td><%= auto.price_sold %></td> -->
+      <td><%= link_to 'Details', auto %></td>
+      <!--<td><%= link_to 'Edit', edit_auto_path(auto) %></td>-->
+      <!--<td><%= link_to 'Delete', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule a Test Drive</a></p>
+
+  <br><br><br><br>
+
+
+
+
 <!-- PARALLAX IMAGE -->
   <div class="parallax2"></div>
 
@@ -129,6 +179,12 @@
 
 <div class="parallax3"></div>
 
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule Auto Service</a></p>
+
+  <br><br><br><br>
+
 <!-- Add Google Maps -->
 <div class="container-fluid text-center">
   <h2>DIRECTIONS</h2>
@@ -149,20 +205,30 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkWslnRKIUhtGkaD4m28H00-AGKwp0DFU&callback=myMap"></script>
 </center>
 
-<br><br><br><br>
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule an Auto Consult</a></p>
+
+  <br><br><br><br>
 
 <!-- PARALLAX IMAGE #4 NASHVILLE -->
 
       <div class="parallax4">
-        <div class="text-center">
-          <br>
-          <p>
+        <div class="text-center contact-font">
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          
             Located in <br>
             "Music City"<br>
             Nashville, Tennessee
-          </p>
+          
         </div>
       </div>
+
+  <br><br><br>
+
+    <p class="text-center"><a href="#" class="btn btn-primary">Contact Us</a></p>
+
+  <br><br><br><br>
 
 
 <!--   FOOTER   -->
