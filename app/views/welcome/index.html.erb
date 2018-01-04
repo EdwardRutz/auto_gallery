@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
 
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+
 
   <!--Shim adjusts for older IE 9 or less browsers-->
   <%= render 'layouts/shim' %>
@@ -39,100 +39,65 @@
 <div id="portfolio" class="container-fluid text-center bg-grey">
   <h2>FEATURED AUTOS</h2><br>
   <h4>Special Autos, Special Price</h4>
-
-
-
-  <div class="row text-center slideanim">
-
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <%= image_tag ("car1d.png") %>
-        <!-- <img src="/app/assets/images/car1.png" width="400" height="300"> -->
-        <p><strong>Mercedes</strong></p>
-        <p>$50k</p>
-        <a href="#" class="btn btn-primary">Schedule a Test Drive</a>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <%= image_tag ("car2.png") %>
-        <!--<img src="newyork.jpg" alt="New York" width="400" height="300">-->
-        <p><strong>Corvette</strong></p>
-        <p>Cash Only!</p>
-        <a href="#" class="btn btn-primary">Schedule a Test Drive</a>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <%= image_tag ("car3.png") %>
-        <!--<img src="sanfran.jpg" alt="San Francisco" width="400" height="300">-->
-        <p><strong>Ford</strong></p>
-        <p>Buy one get one free</p>
-        <a href="#" class="btn btn-primary">Schedule a Test Drive</a>
-      </div>
-    </div>
-
-  </div>
-
 </div>
+  
+<div class="container">
+  <div class="row">
+<% @featured.each do |auto| %>
+
+    <div class="col-xs-18 col-sm-4 col-md-3">
+
+      <div class="productbox">
+
+        <div class="imgthumb img-responsive">
+          <%= image_tag(auto.image_url.to_s) %>
+        </div>
+
+        <div class="caption">
+
+          <h5><%= auto.make %>
+          <%= auto.model %>
+          <%= auto.year %></h5>
+
+          <s class="text-muted"></s> <b class="finalprice">$<%= auto.list_price %></b> 
+
+          <!-- Button for Details -->
+          <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-zoom-in"></i></a> -->
+          <!-- Test drive button for each card, maybe use? -->
+             <!--  <p>
+              <button type="button" class="btn btn-success btn-sm center-block">Test Drive</button>
+              </p> -->
+        </div>
+
+        <div class="sale">
+          <b>Sale</b>
+        </div>
+
+         <!-- <div class="sale">
+          <b>90%</b><br>OFF
+        </div> -->
+
+      </div>
+    </div>
+
+<% end %>
+  </div><!--/row-->
+</div><!--/container -->
 
 
-<br><br><br>
-<table>
-  <thead>
-  <tr>
-    <th>Make</th>
-    <th>Model</th>
-    <th>Year</th>
-    <th>Trim</th>
-    <!-- <th>Vin</th> -->
-    <th>Auto description</th>
-    <th>Condition</th>
-    <th>Mileage</th>
-    <th>List price</th>
-    <!-- <th>Featured</th> -->
-    <!-- <th>Purchase price</th> -->
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @featured.each do |auto| %>
-    <tr>
-      <td><%= auto.make %></td>
-      <td><%= auto.model %></td>
-      <td><%= auto.year %></td>
-      <td><%= auto.trim %></td>
-      <!-- <td><%= auto.vin %></td> -->
-      <td><%= auto.auto_description %></td>
-      <td><%= auto.condition %></td>
-      <td><%= auto.mileage %></td>
-      <td><%= auto.list_price %></td>
-      <!-- <td><%= auto.price_sold %></td> -->
-      <td><%= link_to 'Details', auto %></td>
-      <!--<td><%= link_to 'Edit', edit_auto_path(auto) %></td>-->
-      <!--<td><%= link_to 'Delete', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-  <br><br><br>
-
+  <br><br>
+  <div>
     <p class="text-center"><a href="#" class="btn btn-primary">Schedule a Test Drive</a></p>
+    <p class="text-center"><a href="#" class="btn btn-primary">See More Autos</a></p>
+    <!-- <li><%= link_to 'SEARCH AUTOS', search_path %></li> -->
+  </div>
 
   <br><br><br><br>
 
 
 
-
 <!-- PARALLAX IMAGE -->
   <div class="parallax2"></div>
-
-
-
 
 
  <!--Container (Services Section)-->
@@ -177,13 +142,17 @@
   </div>
 </div>
 
-<div class="parallax3"></div>
-
   <br><br><br>
 
     <p class="text-center"><a href="#" class="btn btn-primary">Schedule Auto Service</a></p>
 
   <br><br><br><br>
+
+<div class="parallax3"></div>
+
+  <br><br><br>
+
+
 
 <!-- Add Google Maps -->
 <div class="container-fluid text-center">

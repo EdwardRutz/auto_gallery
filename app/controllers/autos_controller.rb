@@ -11,15 +11,6 @@ class AutosController < ApplicationController
     @autos = Auto.all
   end
 
-
-
-  # def featured
-  #  @featured = Auto.where(:featured => true)
-  # end
-
-
-
-
   # GET /autos/1
   # GET /autos/1.json
   def show
