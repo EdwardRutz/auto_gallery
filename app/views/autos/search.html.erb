@@ -4,68 +4,64 @@
 <%= render 'layouts/header' %>
 
 
-<!--<p id="notice"><%= notice %></p>-->
+<p id="notice"><%= notice %></p>
 
 
-<br><br><br>
-<table>
-  <thead>
-  <tr>
-    <th>Make</th>
-    <th>Model</th>
-    <th>Year</th>
-    <th>Trim</th>
-    <!-- <th>Vin</th> -->
-    <th>Auto description</th>
-    <th>Condition</th>
-    <th>Mileage</th>
-    <th>List price</th>
-    <!-- <th>Featured</th> -->
-    <!-- <th>Purchase price</th> -->
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @autos.each do |auto| %>
-    <tr>
-      <td><%= auto.make %></td>
-      <td><%= auto.model %></td>
-      <td><%= auto.year %></td>
-      <td><%= auto.trim %></td>
-      <!-- <td><%= auto.vin %></td> -->
-      <td><%= auto.auto_description %></td>
-      <td><%= auto.condition %></td>
-      <td><%= auto.mileage %></td>
-      <td><%= auto.list_price %></td>
-      <!-- <td><%= auto.price_sold %></td> -->
-      <td><%= link_to 'Details', auto %></td>
-      <!--<td><%= link_to 'Edit', edit_auto_path(auto) %></td>-->
-      <!--<td><%= link_to 'Delete', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-
-
-
-
- 
-<div class="container">
-  <h2>Card Image</h2>
-  <p>Image at the top (card-img-top):</p>
-  <div class="card" style="width:250px">
-    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:80%">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary">See Profile</a>
-    </div>
-  </div>
-  <br>
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Auto Showroom</h2><br>
+  <h4>The Right Car at the Right Price</h4>
 </div>
+  
+<div class="container">
+  <div class="row">
 
+<% @autos.each do |auto| %>
+
+    <div class="col-xs-18 col-sm-4 col-md-3">
+
+      <div class="productbox">
+
+        <div class="imgthumb img-responsive">
+          <%= image_tag(auto.image_url.to_s) %>
+        </div>
+
+        <div class="caption">
+
+          <h5><%= auto.make %>
+          <%= auto.model %>
+          <%= auto.year %></h5>
+
+          <s class="text-muted"></s> <b class="finalprice">$<%= auto.list_price %></b> 
+
+          <!-- Button for Details -->
+          <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-zoom-in"></i></a> -->
+          <!-- Test drive button for each card, maybe use? -->
+             <!--  <p>
+              <button type="button" class="btn btn-success btn-sm center-block">Test Drive</button>
+              </p> -->
+        </div>
+
+       <!--  <div class="sale">
+          <b>Sale</b>
+        </div> -->
+
+         <!-- <div class="sale">
+          <b>90%</b><br>OFF
+        </div> -->
+
+      </div>
+    </div>
+
+<% end %>
+  </div><!--/row-->
+</div><!--/container -->
+
+
+  <br><br>
+  <div>
+    <p class="text-center"><a href="#" class="btn btn-primary">Schedule a Test Drive</a></p>
+  
+  </div>
 
 
 
