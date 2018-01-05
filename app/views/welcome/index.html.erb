@@ -24,13 +24,19 @@
 
 <!-- JUMBOTRON -->
 
-  <div class="jumbotron text-center">
+  <!-- <div class="jumbotron text-center">
     <h1>Auto Gallery</h1>
     <p>The Right Car at the Right Price</p>
-  </div>
+  </div> -->
 
   <!-- PARALLAX IMAGE -->
-  <div class="parallax1"></div>
+  <div class="parallax1">
+    <div class="text-center contact-font">
+      <br><br><br> <!-- TODO.Refactor this -->
+      <h1> Auto Gallery </h1><br><br><br>
+      <h3>The Right Car at the Right Price </h3>
+    </div>
+  </div>
 
 
 
@@ -87,17 +93,26 @@
 
   <br><br>
   <div>
-    <p class="text-center"><a href="#" class="btn btn-primary">Schedule a Test Drive</a></p>
-    <p class="text-center"><a href="#" class="btn btn-primary">See More Autos</a></p>
-    <!-- <li><%= link_to 'SEARCH AUTOS', search_path %></li> -->
-  </div>
+    
+    <p class="text-center">
+      <%= link_to 'Schedule a Test Drive', contact_path, class: "btn btn-primary" %>
+    </p>
+
+    <p class="text-center">
+      <%= link_to 'See More Autos', search_path, class: "btn btn-primary" %>
+    </p>
 
   <br><br><br><br>
 
 
-
 <!-- PARALLAX IMAGE -->
-  <div class="parallax2"></div>
+  <div class="parallax2 bg-img">
+    <div class="text-center contact-font">
+      <br><br><br><br><br><br><br><br> <!-- TODO.Refactor this -->
+      <h1> Auto Gallery </h1>
+      <h3>The Right Car at the Right Price </h3>
+    </div>
+  </div>
 
 
  <!--Container (Services Section)-->
@@ -144,11 +159,21 @@
 
   <br><br><br>
 
-    <p class="text-center"><a href="#" class="btn btn-primary">Schedule Auto Service</a></p>
+   
+     <p class="text-center">
+      <%= link_to 'Schedule Auto Service', contact_path, class: "btn btn-primary" %>
+    </p>
+
 
   <br><br><br><br>
 
-<div class="parallax3"></div>
+<div class="parallax3 bg-img">
+  <div class="text-center contact-font">
+    <br><br><br><br><br><br><br><br> <!-- TODO.Refactor this -->
+    <h1>Auto Gallery </h1>
+    <h3>Excellent Auto Service</h3>
+  </div>
+</div>
 
   <br><br><br>
 
@@ -176,13 +201,15 @@
 
   <br><br><br>
 
-    <p class="text-center"><a href="#" class="btn btn-primary">Schedule an Auto Consult</a></p>
-
+  <p class="text-center">
+      <%= link_to 'Schedule an Auto Consult', contact_path, class: "btn btn-primary" %>
+    </p>
+    
   <br><br><br><br>
 
 <!-- PARALLAX IMAGE #4 NASHVILLE -->
 
-      <div class="parallax4">
+      <div class="parallax4 bg-img">
         <div class="text-center contact-font">
           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <!-- TODO.Refactor this -->
           
@@ -194,13 +221,23 @@
 
   <br><br><br>
 
-    <p class="text-center"><a href="#" class="btn btn-primary">Contact Us</a></p>
-
-  <br><br><br><br>
+     <p class="text-center">
+      <%= link_to 'Contact Us', contact_path, class: "btn btn-primary" %>
+    </p>
+  <br>
 
 
 <!--   FOOTER   -->
+  
 <%= render 'layouts/footer' %>
+
+
+<!--   DEALER LOGIN   -->
+
+<div class="login">
+      <%= link_to "Login", login_path, class: 'login'%>
+</div>
+<br><br>
 
 </body>
 </html>

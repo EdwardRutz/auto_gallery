@@ -36,12 +36,15 @@
     <%= form.number_field :vin, id: :auto_vin %>
   </div>
 
-  
 
   <div class="field">
-    <%= form.label :auto_img %>
-    <%= form.text_field :auto_img, id: :auto_auto_img %>
+    <%= form.label :image %>
   </div>
+
+  <div>
+    <%= image_tag(@auto.image_url.to_s) %>
+  </div>
+
 
    <div class="field">
     add an image....

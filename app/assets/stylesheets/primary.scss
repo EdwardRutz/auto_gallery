@@ -50,17 +50,18 @@ h2 {
   text-transform: uppercase;
   color: #000;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 h4 {
   font-size: 19px;
   line-height: 1.375em;
   color: #303030;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 h5 {
   margin-top: 0px;
+  margin-bottom: 0px;
   color: white;
   max-height: 30px;
   overflow: hidden;
@@ -204,7 +205,7 @@ line-height: 13px;
 }
 
 
-
+/****************** CUSTOMER SEARCH PAGE *****************/
 
 
 
@@ -224,24 +225,6 @@ footer .glyphicon {
 }
 
 
-/********************* MEDIA QUERIES *********************/
-
-
-@media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0;
-  }
-  .btn-lg {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .logo {
-    font-size: 150px;
-  }
-}
 
 /********************* FORMS-REGISTER NEW USER *********************/
 
@@ -312,4 +295,48 @@ Smoky: #58595B
   background-size: cover;
 }
 
+// ----- Dark Overlay -----
 
+// html, body {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.bg-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  
+  &:before {
+    content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#000,#000);
+  opacity: .6; 
+  }
+}
+
+
+
+/********************* MEDIA QUERIES *********************/
+
+
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 150px;
+  }
+}
