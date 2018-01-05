@@ -11,67 +11,103 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :make %>
-    <%= form.text_field :make, id: :auto_make %>
-  </div>
 
-  <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model, id: :auto_model %>
-  </div>
 
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year, id: :auto_year %>
-  </div>
+<div class="container">  <!-- Panel Container -->
 
-  <div class="field">
-    <%= form.label :trim %>
-    <%= form.text_field :trim, id: :auto_trim %>
-  </div>
+  <!-- Panel #1 -->
+
+  <h2>Auto Information</h2>
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Auto Information</div>
+      <div class="panel-body">
+
+
+        <div class="field">
+         <%= form.label :image %>
+        </div>
+
+        <div>
+          <%= image_tag(@auto.image_url.to_s) %>
+        </div>
+
+
+         <div class="field">
+          add an image....
+          <%= form.file_field :image %>
+        </div>
+
+        <div class="field">
+          <%= form.label :make %>
+          <%= form.text_field :make, id: :auto_make %>
+        </div>
+
+        <div class="field">
+          <%= form.label :model %>
+          <%= form.text_field :model, id: :auto_model %>
+        </div>
+
+        <div class="field">
+          <%= form.label :year %>
+          <%= form.text_field :year, id: :auto_year %>
+        </div>
+
+        <div class="field">
+          <%= form.label :list_price %>
+          <%= form.number_field :list_price, id: :auto_list_price %>
+        </div>
+
+         <div class="field">
+            <%= form.label :user_id %>
+            <%= form.text_field :user_id, id: :auto_user_id %>
+        </div>
+
+
+      </div>
+    </div>
+
+ <!-- Panel #2 -->
+
+    <div class="panel panel-info">
+      <div class="panel-heading">Auto Details</div>
+      <div class="panel-body">
+
+      <div class="field">
+        <%= form.label :condition %>
+        <%= form.text_field :condition, id: :auto_condition %>
+      </div>
+      
+      <div class="field">
+        <%= form.label :auto_description %>
+        <%= form.text_area :auto_description, id: :auto_auto_description %>
+      </div>
+
+        <div class="field">
+          <%= form.label :mileage %>
+          <%= form.number_field :mileage, id: :auto_mileage %>
+        </div>
+
+        <div class="field">
+          <%= form.label :trim %>
+          <%= form.text_field :trim, id: :auto_trim %>
+        </div>
+
 
   <div class="field">
     <%= form.label :vin %>
     <%= form.number_field :vin, id: :auto_vin %>
   </div>
 
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :image %>
-  </div>
+ <!-- Panel #3 -->
 
-  <div>
-    <%= image_tag(@auto.image_url.to_s) %>
-  </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">Sales Details</div>
+      <div class="panel-body">
 
-
-   <div class="field">
-    add an image....
-    <%= form.file_field :image %>
-  </div>
-
-
-
-  <div class="field">
-    <%= form.label :auto_description %>
-    <%= form.text_area :auto_description, id: :auto_auto_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :condition %>
-    <%= form.text_field :condition, id: :auto_condition %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mileage %>
-    <%= form.number_field :mileage, id: :auto_mileage %>
-  </div>
-
-  <div class="field">
-    <%= form.label :list_price %>
-    <%= form.number_field :list_price, id: :auto_list_price %>
-  </div>
 
   <div class="field">
     <%= form.label :price_sold %>
@@ -79,14 +115,15 @@
   </div>
 
   <div class="field">
+    <%= form.label :featured %>
+    <%= form.check_box :featured, id: :auto_featured %>
+  </div>
+  
+  <div class="field">
     <%= form.label :sold %>
     <%= form.check_box :sold, id: :auto_sold %>
   </div>
 
-  <div class="field">
-    <%= form.label :featured %>
-    <%= form.check_box :featured, id: :auto_featured %>
-  </div>
 
   <div class="field">
     <%= form.label :purchase_price %>
@@ -113,10 +150,12 @@
     <%= form.text_field :sold_by, id: :auto_sold_by %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :auto_user_id %>
-  </div>
+      </div>
+    </div>
+    
+</div> <!-- /End of Panel Container -->
+
+
 
   <div class="actions">
     <%= form.submit %>
