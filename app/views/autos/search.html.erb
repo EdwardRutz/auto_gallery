@@ -11,7 +11,13 @@
   <h2>Auto Showroom</h2><br>
   <h4>The Right Car at the Right Price</h4>
 </div>
-  
+
+  <div class="text-center">
+    <%= link_to 'Schedule a Test Drive', contact_path, class: "btn btn-primary" %>
+  </div>
+
+<br><br>
+
 <div class="container">
   <div class="row">
 
@@ -32,22 +38,8 @@
           <%= auto.year %></h5>
 
           <s class="text-muted"></s> <b class="finalprice">$<%= auto.list_price %></b> 
-
-          <!-- Button for Details -->
-          <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-zoom-in"></i></a> -->
-          <!-- Test drive button for each card, maybe use? -->
-             <!--  <p>
-              <button type="button" class="btn btn-success btn-sm center-block">Test Drive</button>
-              </p> -->
+          
         </div>
-
-       <!--  <div class="sale">
-          <b>Sale</b>
-        </div> -->
-
-         <!-- <div class="sale">
-          <b>90%</b><br>OFF
-        </div> -->
 
       </div>
     </div>
@@ -58,12 +50,11 @@
 
 
   <br><br>
-  <div>
-    <p class="text-center"><a href="#" class="btn btn-primary">Schedule a Test Drive</a></p>
-  
-  </div>
+    <p class="text-center">
+      <%= link_to 'Schedule a Test Drive', contact_path, class: "btn btn-primary" %>
+    </p>
 
-
+  <br><br><br>
 
 
 
