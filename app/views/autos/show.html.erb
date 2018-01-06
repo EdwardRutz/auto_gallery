@@ -1,104 +1,138 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Make:</strong>
-  <%= @auto.make %>
-</p>
-
-<p>
-  <strong>Model:</strong>
-  <%= @auto.model %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @auto.year %>
-</p>
-
-<p>
-  <strong>Trim:</strong>
-  <%= @auto.trim %>
-</p>
-
-<p>
-  <strong>Vin:</strong>
-  <%= @auto.vin %>
-</p>
 
 
 
+<div class="container">
+  <h2>Panels with Contextual Classes</h2>
 
-<p>
-  <strong>Auto Image:</strong>
-</p>
-<%= image_tag(@auto.image_url.to_s) %>
+    <!-- Panel #1 -->
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Auto Information</div>
+      <div class="panel-body">
+        <p>
+          <strong>Auto Image:</strong>
+        </p>
+        <%= image_tag(@auto.image_url.to_s) %>
+
+
+         <p>
+          <strong>Make:</strong>
+          <%= @auto.make %>
+        </p>
+
+        <p>
+          <strong>Model:</strong>
+          <%= @auto.model %>
+        </p>
+
+        <p>
+          <strong>Year:</strong>
+          <%= @auto.year %>
+        </p>
+        <p>
+          <strong>List price:</strong>
+          <%= @auto.list_price %>
+        </p>
+      </div>
+    </div>
+
+    <p>
+      <strong>User:</strong>
+      <%= @auto.user %>
+    </p>
+
+    
+
+    <!-- Panel #2 -->
+
+     <div class="panel panel-info">
+      <div class="panel-heading">Auto Details</div>
+      <div class="panel-body">
+        <p>
+          <strong>Condition:</strong>
+          <%= @auto.condition %>
+        </p>
+        <p>
+          <strong>Auto description:</strong>
+          <%= @auto.auto_description %>
+        </p>
+        <p>
+          <strong>Mileage:</strong>
+          <%= @auto.mileage %>
+        </p>
+        <p>
+          <strong>Trim:</strong>
+          <%= @auto.trim %>
+        </p>
+
+        <p>
+          <strong>Vin:</strong>
+          <%= @auto.vin %>
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Panel #3 -->
+
+    <div class="panel panel-success">
+      <div class="panel-heading">Sales Details</div>
+      <div class="panel-body">
+        <p>
+          <strong>Sold:</strong>
+          <%= @auto.sold %>
+        </p>
+
+        <p>
+          <strong>Featured:</strong>
+          <%= @auto.featured %>
+        </p>        
+        <p>
+          <strong>Price sold:</strong>
+          <%= @auto.price_sold %>
+        </p>
+        <p>
+          <strong>Purchase price:</strong>
+          <%= @auto.purchase_price %>
+        </p>
+
+        <p>
+          <strong>Purchase date:</strong>
+          <%= @auto.purchase_date %>
+        </p>
+
+        <p>
+          <strong>Price sold:</strong>
+          <%= @auto.price_sold %>
+        </p>
+
+        <p>
+          <strong>Date sold:</strong>
+          <%= @auto.date_sold %>
+        </p>
+
+        <p>
+          <strong>Sold by:</strong>
+          <%= @auto.sold_by %>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 
-<p>
-  <strong>Auto description:</strong>
-  <%= @auto.auto_description %>
-</p>
 
-<p>
-  <strong>Condition:</strong>
-  <%= @auto.condition %>
-</p>
 
-<p>
-  <strong>Mileage:</strong>
-  <%= @auto.mileage %>
-</p>
 
-<p>
-  <strong>List price:</strong>
-  <%= @auto.list_price %>
-</p>
 
-<p>
-  <strong>Price sold:</strong>
-  <%= @auto.price_sold %>
-</p>
 
-<p>
-  <strong>Sold:</strong>
-  <%= @auto.sold %>
-</p>
 
-<p>
-  <strong>Featured:</strong>
-  <%= @auto.featured %>
-</p>
 
-<p>
-  <strong>Purchase price:</strong>
-  <%= @auto.purchase_price %>
-</p>
 
-<p>
-  <strong>Purchase date:</strong>
-  <%= @auto.purchase_date %>
-</p>
-
-<p>
-  <strong>Price sold:</strong>
-  <%= @auto.price_sold %>
-</p>
-
-<p>
-  <strong>Date sold:</strong>
-  <%= @auto.date_sold %>
-</p>
-
-<p>
-  <strong>Sold by:</strong>
-  <%= @auto.sold_by %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @auto.user %>
-</p>
-
-<%= link_to 'Edit', edit_auto_path(@auto) %> |
-<%= link_to 'Back', autos_path %>
+<%= link_to 'Edit', edit_auto_path(@auto) class: "btn btn-default" %> |
+<%= link_to 'Back', autos_path class: "btn btn-default" %>

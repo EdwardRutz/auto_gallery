@@ -24,9 +24,9 @@
         <td><%= user.position %></td>
         <td><%= user.phone_number %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %>
-        <%= link_to 'Edit', edit_user_path(user) %>
-        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center"><%= link_to 'Show', user, class: "btn btn-default btn-xs" %>
+        <%= link_to 'Edit', edit_user_path(user), class: "btn btn-default btn-xs" %> </td>
+        <td class="text-center"><%= link_to 'Destroy', user, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

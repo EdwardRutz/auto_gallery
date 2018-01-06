@@ -66,9 +66,9 @@
           <td><%= auto.purchase_price %></td>
           <td><%= auto.purchase_date %></td> -->
           <!--<td><%= auto.user %></td>-->
-          <td><%= link_to 'Details', auto %>
-            <%= link_to 'Edit', edit_auto_path(auto) %>
-          <%= link_to 'Delete', auto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="text-center" ><%= link_to 'Details', auto, class: "btn btn-default btn-xs" %>
+            <%= link_to 'Edit', edit_auto_path(auto), class: "btn btn-default btn-xs" %></td>
+          <td class="text-center" ><%= link_to 'Delete', auto, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
