@@ -33,9 +33,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        # TODO.flash notices don't work, 38. notice only works if line 37 is present
         flash[:success] = "Welcome to Auto Gallery"
-        format.html { redirect_to dashboard_url, notice: 'User was successfully created.'}
+        format.html { redirect_to users_url, notice: 'User was successfully created.'}
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -47,6 +46,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    flash[:success] = " "
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -61,9 +61,10 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    flash[:success] = "Deleted"
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.'}
+      format.html { redirect_to users_url, notice: 'User was successfully deleted.'}
       format.json { head :no_content }
     end
   end
@@ -76,6 +77,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :position, :phone_number)
     end
 end

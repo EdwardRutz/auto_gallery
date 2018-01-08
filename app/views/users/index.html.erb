@@ -1,8 +1,10 @@
+
+<br><br>
 <%= render 'layouts/header_dashboard' %>
 
 
+<!-- <p id="notice"><%= notice %></p> -->
 
-<p id="notice"><%= notice %></p>
 <br><br><br><br>
 <h1>Users</h1>
 
@@ -26,7 +28,7 @@
         <td><%= user.email %></td>
         <td class="text-center"><%= link_to 'Show', user, class: "btn btn-default btn-xs" %>
         <%= link_to 'Edit', edit_user_path(user), class: "btn btn-default btn-xs" %> </td>
-        <td class="text-center"><%= link_to 'Destroy', user, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center"><%= link_to 'Delete', user, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-default" %>
