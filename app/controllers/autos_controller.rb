@@ -36,6 +36,7 @@ class AutosController < ApplicationController
 
     respond_to do |format|
       if @auto.save
+        flash[:success] = "Success!"
         format.html { redirect_to @auto, notice: 'Auto was successfully created.' }
         format.json { render :show, status: :created, location: @auto }
       else
@@ -50,6 +51,7 @@ class AutosController < ApplicationController
   def update
     respond_to do |format|
       if @auto.update(auto_params)
+        flash[:success] = "Success!"
         format.html { redirect_to @auto, notice: 'Auto was successfully updated.' }
         format.json { render :show, status: :ok, location: @auto }
       else
@@ -64,7 +66,8 @@ class AutosController < ApplicationController
   def destroy
     @auto.destroy
     respond_to do |format|
-      format.html { redirect_to autos_url, notice: 'Auto was successfully destroyed.' }
+      flash[:success] = "Success!"
+      format.html { redirect_to autos_url, notice: 'Auto was successfully deleted.' }
       format.json { head :no_content }
     end
   end

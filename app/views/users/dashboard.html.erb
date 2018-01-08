@@ -1,31 +1,42 @@
-<html>
+
 <%= render 'layouts/header_dashboard' %>
 
 
 <br><br><br><br>
 
 <h1>DEALER DASHBOARD</h1>
+<br>
 
-
-
-<ul>
-  <li>SALES</li>
+  <h4>INVENTORY</h4>
     <ul>
-      <li>Sales This Week</li>
-      <li>Monthly Sales</li>
-      <li>Year-to-Date Sales</li>
+      <li>Total Autos in Inventory:  <%= Auto.where.not(sold: true).count %> </li> 
+      <li>Autos on Sale in showroom "Featured" section: <%= Auto.where(featured: true).count %></li>
+      <li>Value of inventory:   $<%= Auto.where.not(sold: true).sum(:purchase_price) %> </li>
+      <li>Average time in Inventory</li>
+
     </ul>
+
+    <br>
+    
+  <h4>SALES</h4>
+      <ul>
+        <li>Autos sold to date:  <%= Auto.distinct.count('sold') %></li>
+        <li>Value of sales to date:  $<%= Auto.where.not(sold: true).sum(:purchase_price) %>
+        <li>Sales This Week</li>  
+        <li>Monthly Sales</li>
+        <!-- Auto.group(:year).distinct.count(:date) -->
+        <li> 2018 Sales: $<%= Auto.where(year: "2018").sum(:purchase_price) %></li>
+        <li> 2017 Sales: $<%= Auto.where(year: "2017").sum(:purchase_price) %></li>
+         
+      </ul>
 
   <br><br>
 
-  <li>INVENTORY</li>
-    <ul>
-      <li>Total Autos in Inventory</li>
-      <li>Average time in Inventory</li>
-    </ul>
-</ul>
 
 
-</html>
+
+
+
+
 
 

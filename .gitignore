@@ -4,8 +4,12 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore all docs 
+# Ignore all work docs 
 /DOCS-AutoGallery/*
+
+# Ignore uploaded images in public folder
+/public/uploads/*
+
 
 # Ignore bundler config.
 /.bundle
