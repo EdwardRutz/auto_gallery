@@ -4,8 +4,17 @@ class AutosController < ApplicationController
   # GET /autos
   # GET /autos.json
   def index
-    @autos = Auto.all
+    # @autos = Auto.all
+    # @autos = Auto.search(params[:term])
+
+    # Search Field
+    @autos = if params[:term]
+      Auto.where('make LIKE ? OR model LIKE ? OR year LIKE ?', "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%")
+      else
+        Auto.all
+      end
   end
+    # /Search Field
 
   def sales_console
     @autos = Auto.all
@@ -80,7 +89,7 @@ class AutosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def auto_params
-      params.require(:auto).permit(:make, :model, :year, :trim, :vin, :auto_img, :image, :auto_description, :condition, :mileage, :list_price, :price_sold, :sold, :featured, :purchase_price, :purchase_date, :price_sold, :date_sold, :sold_by, :user_id)
+      params.require(:auto).permit(:make, :model, :year, :trim, :vin, :auto_img, :image, :auto_description, :condition, :mileage, :list_price, :price_sold, :sold, :featured, :purchase_price, :purchase_date, :price_sold, :date_sold, :sold_by, :user_id, :term)
     end
 end
 

@@ -1,15 +1,31 @@
 <%= render 'layouts/header_dashboard' %>
 
 
-<p id="notice"><%= notice %></p>
 
-<br><br><br><br>
-<h1>Autos</h1>
+<br>
+<h1>Auto Inventory</h1>
+
+<!-- SEARCH -->
+
+<div class="input-group" align="center">
+  <div class="form-inline">
+    <%= form_tag(autos_path, method: :get) do %>
+    <%= text_field_tag :term %>
+    <%= submit_tag 'Search', class: "btn btn-success"  %>
+    <% end %>
+  <%= link_to 'Reset', autos_path, class: "btn btn-default" %>
+  </div>
+</div> 
+
+<!-- /SEARCH -->
+
+<br>
 
 <div style="overflow-x:auto;">
 
   <table>
     <thead>
+
       <tr>
         <th>Make</th>
         <th>Model</th>

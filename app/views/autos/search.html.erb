@@ -7,7 +7,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<div id="portfolio" class="container-fluid text-center bg-grey">
+<div  class="container-fluid text-center">
   <h2>Auto Showroom</h2><br>
   <h4>The Right Car at the Right Price</h4>
 </div>
@@ -16,7 +16,17 @@
     <%= link_to 'Schedule a Test Drive', contact_path, class: "btn btn-primary" %>
   </div>
 
-<br><br>
+<!-- SEARCH -->
+<div class="input-group" align="center">
+  <div class="form-inline">
+    <%= form_tag(autos_path, method: :get) do %>
+    <%= text_field_tag :term %>
+    <%= submit_tag 'Search', class: "btn btn-success"  %>
+    <% end %>
+  </div>
+</div> 
+
+<!-- /SEARCH -->
 
 <div class="container">
   <div class="row">
