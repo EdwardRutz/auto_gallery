@@ -11,8 +11,8 @@
     <ul>
       <li>Total Autos in Inventory:  <%= Auto.where.not(sold: true).count %> </li> 
       <li>Autos on Sale in showroom "Featured" section: <%= Auto.where(featured: true).count %></li>
-      <li>Value of inventory:   $<%= Auto.where.not(sold: true).sum(:purchase_price) %> </li>
-      <li>Average time in Inventory</li>
+      <li>Value of Inventory:   $<%= Auto.where.not(sold: true).sum(:purchase_price) %> </li>
+      <!-- <li>Average time in Inventory</li> -->
 
     </ul>
 
@@ -20,12 +20,12 @@
     
   <h4>SALES</h4>
       <ul>
-        <li>Autos sold to date:  <%= Auto.distinct.count('sold') %></li>
-        <li>Value of sales to date:  $<%= Auto.where.not(sold: true).sum(:purchase_price) %>
-        <li>Sales This Week</li>  
-        <li>Monthly Sales</li>
+        <li>Autos Sold to Date:  <%= Auto.distinct.count('sold') %></li>
+        <li>Sales Total to Date:  $<%= Auto.where(sold: true).sum(:price_sold) %>
+        <!-- <li>Sales This Week</li>  
+        <li>Monthly Sales</li> -->
         <!-- Auto.group(:year).distinct.count(:date) -->
-        <li> 2018 Sales: $<%= Auto.where(year: "2018").sum(:purchase_price) %></li>
+        <li> 2018 Sales: $<%= Auto.where(purchase_date: "2018").sum(:price_sold) %></li>
         <li> 2017 Sales: $<%= Auto.where(year: "2017").sum(:purchase_price) %></li>
          
       </ul>
